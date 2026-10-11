@@ -208,4 +208,49 @@
     }
 }
 
+/* LAGEN */
+#lagen {
+    padding: 40px 30px;
+}
+
+#lagen h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.lag-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.lag {
+    background-color: #E8EDF8;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1 1 250px;
+}
+
+.lag h3 {
+    font-size: 22px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.lag p {
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* LAGEN - MOBIL */
+@media (max-width: 600px) {
+    .lag-lista {
+        flex-direction: column;
+    }
+
+    .lag {
+        flex: none;
+    }
+}
 
