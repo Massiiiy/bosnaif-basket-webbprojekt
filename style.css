@@ -96,3 +96,58 @@
 .hero-button:hover {
     background-color: #e67e00;
 }
+
+/* MATCHER */
+.match-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.match {
+    background-color: #E8EDF8;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+}
+
+#matcher {
+    padding: 40px 30px;
+}
+
+#matcher h2 {
+    color: black;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.match-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.match-filter button {
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.match-filter button:hover {
+    background-color: #e67e00;
+}
+
+@media (max-width: 600px) {
+    .match-list {
+        flex-direction: column;
+    }
+
+    #matcher {
+        padding: 30px 15px;
+    }
+}
