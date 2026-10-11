@@ -151,3 +151,61 @@
         padding: 30px 15px;
     }
 }
+
+/* NYHETER */
+
+#nyheter {
+    padding: 40px 30px;
+}
+
+.nyheter-lista {
+    display: flex;
+    gap: 20px;
+}
+
+.nyhet {
+    background-color: #E8EDF8;
+    border-radius: 15px;
+    overflow: hidden;
+    flex: 1;
+}
+
+.nyhet img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.nyhet time,
+.nyhet h3,
+.nyhet p {
+    display: block;
+    margin: 15px 20px;
+}
+
+.nyhet h3 {
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+}
+
+#nyheter h2 {
+    color: black;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nyhet time {
+    font-size: 14px;
+    color: #666666;
+}
+
+/* NYHETER - MOBIL */
+@media (max-width: 600px) {
+    .nyheter-lista {
+        flex-direction: column;
+    }
+}
+
+
