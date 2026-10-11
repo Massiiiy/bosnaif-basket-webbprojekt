@@ -254,3 +254,59 @@
     }
 }
 
+/* INTRESSEANMÄLAN */
+#borja-spela {
+    background-color: #E8EDF8;
+    padding: 40px 30px;
+}
+
+#borja-spela h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#borja-spela > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#intresse-formular {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#intresse-formular label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#intresse-formular input,
+#intresse-formular select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#intresse-formular button {
+    background-color: #FF8C00;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+#intresse-formular button:hover {
+    background-color: #e67e00;
+}
