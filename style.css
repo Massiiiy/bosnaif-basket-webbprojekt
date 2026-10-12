@@ -332,3 +332,84 @@
 #tack-meddelande[hidden] {
     display: none;
 }
+
+/* FOOTER */
+.site-footer {
+    color: white;
+}
+
+.footer-top {
+    background-color: rgb(26, 48, 113);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-brand img {
+    width: 60px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.sponsorer {
+    background-color: white;
+    color: black;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.sponsor img {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.sponsor a {
+    display: inline-block;
+    margin: 15px;
+}
+
+@media (max-width: 768px) {
+    .sponsorer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+   .footer-top {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .sponsor img {
+    width: 100px;
+    height: 70px;
+}
+}
+
+.sponsor img {
+    transition: transform 0.3s ease;
+}
+
+.sponsor a:hover img {
+    transform: scale(1.1);
+}
