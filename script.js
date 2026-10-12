@@ -15,3 +15,13 @@ filterKnappar.forEach(function(knapp) {
         });
     });
 });
+
+// INTRESSEANMÄLAN
+const formular = document.querySelector("#intresse-formular");
+
+formular.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    alert("Tack för din intresseanmälan!");
+    formular.reset();
+});
