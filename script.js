@@ -18,10 +18,14 @@ filterKnappar.forEach(function(knapp) {
 
 // INTRESSEANMÄLAN
 const formular = document.querySelector("#intresse-formular");
+const tackMeddelande = document.querySelector("#tack-meddelande");
 
 formular.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    alert("Tack för din intresseanmälan!");
-    formular.reset();
+    const fornamn = document.querySelector("#fornamn").value;
+    tackMeddelande.querySelector("strong").textContent = "Tack, " + fornamn + "!";
+
+    formular.hidden = true;
+    tackMeddelande.hidden = false;   
 });

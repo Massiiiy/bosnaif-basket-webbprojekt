@@ -310,3 +310,25 @@
 #intresse-formular button:hover {
     background-color: #e67e00;
 }
+
+/* TACKMEDDELANDE */
+#tack-meddelande {
+    display: block;
+    background-color: #E5F3E5;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#tack-meddelande strong {
+    display: block;
+    font-size: 28px;
+    color: #2E6635;
+    margin-bottom: 15px;
+}
+
+#tack-meddelande[hidden] {
+    display: none;
+}
