@@ -48,7 +48,8 @@
     content: "";
     flex: 1;
 }
- /* Hamburgar knappen */
+
+/* Hamburgar knappen */
 .menu-toggle {
     display: none;
     background: none;
@@ -68,33 +69,29 @@
         display: none;
     }
 
-    .main-nav.open {
-        display: block;
-    }
-
     .site-header::after {
         display: none;
     }
 
     .nav-list {
-    flex-direction: column;
-    gap: 20px;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .site-header {
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     }
 
     .main-nav.open {
-    display: block;
-    width: 100%;
+        display: block;
+        width: 100%;
     }
 
     .nav-list {
-    align-items: center;
-    gap: 25px;
-    padding: 20px 0;
-}
+        align-items: center;
+        gap: 25px;
+        padding: 20px 0;
+    }
 }
 
 /* VÄLKOMSTSEKTION */
@@ -134,7 +131,7 @@
     text-decoration: none;
     font-weight: bold;
     border-radius: 15px;
-    
+
 }
 
 .hero-button:hover {
@@ -314,7 +311,7 @@
     margin-bottom: 20px;
 }
 
-#borja-spela > p {
+#borja-spela>p {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -442,16 +439,16 @@
         gap: 30px;
     }
 
-   .footer-top {
+    .footer-top {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
 
     .sponsor img {
-    width: 100px;
-    height: 70px;
-}
+        width: 100px;
+        height: 70px;
+    }
 }
 
 .sponsor img {
