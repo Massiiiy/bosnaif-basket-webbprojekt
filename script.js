@@ -1,31 +1,56 @@
-// FILTRERING AV MATCHER
-const filterKnappar = document.querySelectorAll(".match-filter button");
-const matcher = document.querySelectorAll(".match");
+ // FILTRERING AV MATCHER
 
-filterKnappar.forEach(function(knapp) {
-    knapp.addEventListener("click", function() {
-        const valtFilter = knapp.textContent.toLowerCase();
+const filterknappar = document.querySelectorAll(".match-filter button");
+const matchKort = document.querySelectorAll(".match");
 
-        matcher.forEach(function(match) {
-            if (valtFilter === "alla" || match.dataset.type === valtFilter) {
-                match.style.display = "block";
-            } else {
-                match.style.display = "none";
-            }
-        });
+function filtreraMatcher(event) {
+    const valdMatchtyp = event.currentTarget.textContent.trim().toLowerCase();
+
+    matchKort.forEach(function (kort) {
+        const visaMatch = valdMatchtyp === "alla" || kort.dataset.type === valdMatchtyp;
+
+        kort.hidden = !visaMatch;
     });
+}
+
+filterknappar.forEach(function (knapp) {
+    knapp.addEventListener("click", filtreraMatcher);
 });
 
-// INTRESSEANMÄLAN
-const formular = document.querySelector("#intresse-formular");
-const tackMeddelande = document.querySelector("#tack-meddelande");
+ // INTRESSEANMÄLAN
 
-formular.addEventListener("submit", function(event) {
+const intresseFormular = document.querySelector("#intresse-formular");
+const bekraftelseMeddelande = document.querySelector("#tack-meddelande");
+
+function visaTack(event) {
     event.preventDefault();
 
-    const fornamn = document.querySelector("#fornamn").value;
-    tackMeddelande.querySelector("strong").textContent = "Tack, " + fornamn + "!";
+    const spelarensFornamn = document.querySelector("#fornamn").value;
 
-    formular.hidden = true;
-    tackMeddelande.hidden = false;   
+    bekraftelseMeddelande.querySelector("strong").textContent = "Tack, " + spelarensFornamn + "!";
+
+    intresseFormular.hidden = true;
+    bekraftelseMeddelande.hidden = false;
+}
+
+intresseFormular.addEventListener("submit", visaTack);
+
+ // HAMBURGERMENY
+
+const menyKnapp = document.querySelector(".menu-toggle");
+const huvudMeny = document.querySelector(".main-nav");
+const menyLankar = document.querySelectorAll(".nav-link");
+
+function vaxlaMeny() {
+    huvudMeny.classList.toggle("open");
+}
+
+function stangMeny() {
+    huvudMeny.classList.remove("open");
+}
+
+menyKnapp.addEventListener("click", vaxlaMeny);
+
+menyLankar.forEach(function (lank) {
+    lank.addEventListener("click", stangMeny);
 });
