@@ -59,41 +59,6 @@
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        margin-left: auto;
-    }
-
-    .main-nav {
-        display: none;
-    }
-
-    .site-header::after {
-        display: none;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .site-header {
-        flex-wrap: wrap;
-    }
-
-    .main-nav.open {
-        display: block;
-        width: 100%;
-    }
-
-    .nav-list {
-        align-items: center;
-        gap: 25px;
-        padding: 20px 0;
-    }
-}
-
 /* VÄLKOMSTSEKTION */
 .hero img {
     width: 100%;
@@ -187,16 +152,6 @@
     background-color: #e67e00;
 }
 
-@media (max-width: 600px) {
-    .match-list {
-        flex-direction: column;
-    }
-
-    #matcher {
-        padding: 30px 15px;
-    }
-}
-
 /* NYHETER */
 
 #nyheter {
@@ -246,13 +201,6 @@
     color: #666666;
 }
 
-/* NYHETER - MOBIL */
-@media (max-width: 600px) {
-    .nyheter-lista {
-        flex-direction: column;
-    }
-}
-
 /* LAGEN */
 #lagen {
     padding: 40px 30px;
@@ -286,17 +234,6 @@
 .lag p {
     line-height: 1.6;
     margin-bottom: 8px;
-}
-
-/* LAGEN - MOBIL */
-@media (max-width: 600px) {
-    .lag-lista {
-        flex-direction: column;
-    }
-
-    .lag {
-        flex: none;
-    }
 }
 
 /* INTRESSEANMÄLAN */
@@ -432,7 +369,72 @@
     margin: 15px;
 }
 
+.sponsor img {
+    transition: transform 0.3s ease;
+}
+
+.sponsor a:hover img {
+    transform: scale(1.1);
+}
+
+
+/* MOBIL ANPASSAD */
+@media (max-width: 600px) {
+    .lag-lista {
+        flex-direction: column;
+    }
+
+    .lag {
+        flex: none;
+    }
+
+    .nyheter-lista {
+        flex-direction: column;
+    }
+
+    .match-list {
+        flex-direction: column;
+    }
+
+    #matcher {
+        padding: 30px 15px;
+    }
+}
+
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .site-header::after {
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .main-nav.open {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-list {
+        align-items: center;
+        gap: 25px;
+        padding: 20px 0;
+    }
+
     .sponsorer {
         flex-direction: column;
         align-items: center;
@@ -449,12 +451,4 @@
         width: 100px;
         height: 70px;
     }
-}
-
-.sponsor img {
-    transition: transform 0.3s ease;
-}
-
-.sponsor a:hover img {
-    transform: scale(1.1);
 }
